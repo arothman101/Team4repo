@@ -1,13 +1,23 @@
-""" Hackathon - Level 5 """
+def RomanToArabic(Ramon):
+  num = 0
+  for char in Ramon:
+    if char.upper() == "M":
+      num += 1000
+    elif char.upper() == "D":
+      num += 500
+    elif char.upper() == "C":
+      num += 100
+    elif char.upper() == "L":
+      num += 50
+    elif char.upper() == "X":
+      num += 10
+    elif char.upper() == "V":
+      num += 5
+    elif char.upper() == "I":
+      num += 1
+    else:
+      pass
+  print(num)
 
-def convert(numeral):
-    # Add your solution here. You can use additional functions if need be.
-    # Don't forget to add a DocString for all your functions and comment your code.
-    # Your functions should return values rather than printing the result although you can use printing for testing purposes.
-    return "Your Return Value"
-
-if __name__ == '__main__':
-    # Add any code to test your solution here
-    # As per the example, this should return 1145
-    print(convert('MCXLV'))
-    
+roman = input("Enter a roman numeral: ")
+RomanToArabic(roman)
