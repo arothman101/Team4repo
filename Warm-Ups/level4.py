@@ -1,13 +1,17 @@
-""" Hackathon - Level 4 """
+def switcheroo (string1,char1,char2):
+  list1 = []
+  for char in string1:
+    list1.append(char)
+  for i in range(len(list1)):
+    if list1[i] == char1:
+      list1[i] = char2
+    elif list1[i] == char2:
+      list1[i] = char1
+  word = ""
+  for i in list1:
+    word += i
 
-def double_swap(string, a, b):
-    # Add your solution here. You can use additional functions if need be.
-    # Don't forget to add a DocString for all your functions and comment your code.
-    # Your functions should return values rather than printing the result although you can use printing for testing purposes.
-    return "Your Return Value"
+  return(word)
 
-if __name__ == '__main__':
-    # Add any code to test your solution here
-    # As per the example, this should return ienv, ivdv, ivcv
-    print(double_swap('veni, vidi, vici', 'v', 'i'))
-    
+
+print(switcheroo("veni, vidi, vici","v","i"))
